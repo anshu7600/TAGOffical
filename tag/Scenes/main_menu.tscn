@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cvaiev13etwvh"]
+[gd_scene load_steps=17 format=3 uid="uid://cvaiev13etwvh"]
 
 [ext_resource type="Texture2D" uid="uid://dmm3a4opwxgng" path="res://Assests/sprites/c0_hep.png" id="1_1ehe0"]
 [ext_resource type="FontFile" uid="uid://dkksbtprri3ec" path="res://Assests/fonts/Jersey15-Regular.ttf" id="1_28flt"]
@@ -37,6 +37,13 @@ corner_radius_bottom_left = 16
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n45e2"]
 content_margin_top = 0.0
 texture = ExtResource("3_1ehe0")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp0ys"]
+bg_color = Color(0, 0, 0, 0.352941)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_n45e2"]
 color = Color(1, 1, 1, 1)
@@ -139,12 +146,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -350.0
+offset_left = -420.0
 offset_top = -84.0
-offset_right = 350.0
-offset_bottom = 237.0
+offset_right = 420.0
+offset_bottom = 289.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cp0ys")
 
 [node name="Label" type="Label" parent="OptionsMenu"]
 layout_mode = 1
@@ -152,24 +160,32 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -257.0
+offset_top = 25.0
 offset_right = 257.0
-offset_bottom = 41.0
+offset_bottom = 66.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.783197, 0.860659, 0.820493, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_n45e2")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 50
 text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Back" type="Button" parent="OptionsMenu"]
-layout_mode = 2
-offset_left = 157.0
-offset_top = 243.0
-offset_right = 543.0
-offset_bottom = 304.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -193.0
+offset_top = -81.0
+offset_right = 193.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -191,13 +207,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -191.0
-offset_top = -91.5
-offset_right = 191.0
-offset_bottom = 41.5
+offset_left = -264.0
+offset_top = -109.5
+offset_right = 118.0
+offset_bottom = 23.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+scale = Vector2(1.39727, 1.45274)
+theme_override_constants/separation = 0
+alignment = 2
 
 [node name="Music" type="HBoxContainer" parent="OptionsMenu/VBoxContainer"]
 layout_mode = 2

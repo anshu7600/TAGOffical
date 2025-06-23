@@ -1,37 +1,37 @@
 [gd_scene load_steps=7 format=3 uid="uid://143rejfoxho1"]
 
-[ext_resource type="Texture2D" uid="uid://dle4pkvekljfd" path="res://Assests/sprites/knight-1.png (4).png" id="1_l5ahi"]
+[ext_resource type="Texture2D" uid="uid://die4lvu0oxx7h" path="res://Assests/sprites/knight-1.png (4)-1.png.png" id="1_2u0bd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ndhl"]
-atlas = ExtResource("1_l5ahi")
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5x2m"]
+atlas = ExtResource("1_2u0bd")
 region = Rect2(96, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_acd0x"]
-atlas = ExtResource("1_l5ahi")
+[sub_resource type="AtlasTexture" id="AtlasTexture_40cdi"]
+atlas = ExtResource("1_2u0bd")
 region = Rect2(0, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6a6ax"]
-atlas = ExtResource("1_l5ahi")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxsqv"]
+atlas = ExtResource("1_2u0bd")
 region = Rect2(32, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i4m3f"]
-atlas = ExtResource("1_l5ahi")
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjaco"]
+atlas = ExtResource("1_2u0bd")
 region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_acd0x"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2ndhl")
+"texture": SubResource("AtlasTexture_h5x2m")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_acd0x")
+"texture": SubResource("AtlasTexture_40cdi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6a6ax")
+"texture": SubResource("AtlasTexture_xxsqv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i4m3f")
+"texture": SubResource("AtlasTexture_yjaco")
 }],
 "loop": true,
 "name": &"default",
@@ -39,4 +39,6 @@ animations = [{
 }]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+z_index = 9
 sprite_frames = SubResource("SpriteFrames_acd0x")
+frame = 3

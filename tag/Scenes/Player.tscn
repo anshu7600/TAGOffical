@@ -283,6 +283,11 @@ position = Vector2(0, -6)
 shape = SubResource("CapsuleShape2D_1jxqw")
 
 [node name="Arrow" parent="." instance=ExtResource("4_dewec")]
+z_index = 6
 position = Vector2(0, -31)
+
+[node name="TagCooldown" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
 
 [connection signal="body_entered" from="ContactArea" to="." method="_on_contact_area_body_entered"]

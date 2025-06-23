@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var health_bar: ProgressBar = $HealthBar
+@onready var tag_cooldown: Timer = $TagCooldown
 @onready var win_screen_scene = preload("res://Scenes/win_screen.tscn")
 @export var player_index: int = 1
 const SPEED = 115
@@ -66,7 +67,12 @@ func _physics_process(delta: float) -> void:
 	var move_left = "move_left%d" % player_index
 	var move_right = "move_right%d" % player_index
 	var direction := Input.get_axis(move_left, move_right)
-
+	var test = "test%d" % player_index
+	
+	if Input.is_action_just_pressed(test) and is_on_floor():
+		animation_player.play("killed")
+		GameManager.camera_2d.remove_target(GameManager.playerReference[player_index-1])
+		
 	# Jump
 	if Input.is_action_just_pressed(jump) and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -126,10 +132,20 @@ func check_players():
 		
 		
 func _on_contact_area_body_entered(body: Node) -> void:
-	if body == self:
+	if body == self or !(body is CharacterBody2D):
 		return
-	#print(">>> [FRAME %s] Player %d triggered by Player %d" %
-	#	[str(Engine.get_physics_frames()), player_index, body.player_index])
-	if body is CharacterBody2D:
-		var other_index: int = body.player_index
-		print("Player %d entered Player %d" % [other_index, player_index])
+	
+	var other_index: int = body.player_index
+	if player_index < other_index && tag_cooldown.is_stopped():
+		# Run tag logic if one of them is the tagger
+		var is_self_tagger = player_index - 1 == GameManager.tagger_index
+		var is_other_tagger = other_index - 1 == GameManager.tagger_index
+
+		if is_self_tagger:
+			GameManager.remove_current_tagger()
+			GameManager.assign_tagger(other_index - 1)
+			tag_cooldown.start()
+		elif is_other_tagger:
+			GameManager.remove_current_tagger()
+			GameManager.assign_tagger(player_index - 1)
+			tag_cooldown.start()

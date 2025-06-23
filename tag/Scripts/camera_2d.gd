@@ -14,10 +14,8 @@ extends Camera2D
 func _process(_delta):
 	if !targets:
 		return
-	#
-	#
 	
-	screen_size = get_viewport_rect().size  # ✅ Update only, don't redeclare
+	screen_size = get_viewport_rect().size  
 
 	# Camera center
 	var p = Vector2.ZERO
