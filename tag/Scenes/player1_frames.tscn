@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvahxpsohglbe"]
+
+[ext_resource type="SpriteFrames" uid="uid://ffguak32t5b8" path="res://Scenes/oldplayer1_frames.tres" id="1_2un4p"]
+
+[node name="Player1Frames" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_2un4p")
+animation = &"Run"
+autoplay = "Idle"

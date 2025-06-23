@@ -1,0 +1,144 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxdbpxmrdwtae"]
+
+[ext_resource type="Script" uid="uid://dj0omadei1nn2" path="res://Scripts/win_screen.gd" id="1_a00f1"]
+[ext_resource type="FontFile" uid="uid://dkksbtprri3ec" path="res://Assests/fonts/Jersey15-Regular.ttf" id="2_awi1s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmwda"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5t5q"]
+bg_color = Color(0.824351, 0.824351, 0.824351, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1txte"]
+bg_color = Color(0.578618, 0.578618, 0.578618, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26557"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_a00f1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0701523, 0.0701525, 0.0701523, 0.509804)
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -331.0
+offset_top = 12.0
+offset_right = 331.0
+offset_bottom = 113.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_awi1s")
+theme_override_font_sizes/font_size = 100
+text = "Player X Won!!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="WinButtons" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -506.0
+offset_top = -78.0
+offset_right = 506.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="toMainMenu" type="Button" parent="Panel/WinButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_awi1s")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wmwda")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l5t5q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1txte")
+theme_override_styles/normal = SubResource("StyleBoxFlat_26557")
+text = "Main Menu"
+
+[node name="retry" type="Button" parent="Panel/WinButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_awi1s")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wmwda")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l5t5q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1txte")
+theme_override_styles/normal = SubResource("StyleBoxFlat_26557")
+text = "Play again"
+
+[node name="exit" type="Button" parent="Panel/WinButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_awi1s")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wmwda")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l5t5q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1txte")
+theme_override_styles/normal = SubResource("StyleBoxFlat_26557")
+text = "Exit Game"
+
+[node name="WinnerImage" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -268.0
+offset_top = 4.0
+offset_right = 268.0
+offset_bottom = 550.0
+grow_horizontal = 2
+
+[connection signal="pressed" from="Panel/WinButtons/toMainMenu" to="." method="_on_to_main_menu_pressed"]
+[connection signal="pressed" from="Panel/WinButtons/retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Panel/WinButtons/exit" to="." method="_on_exit_pressed"]

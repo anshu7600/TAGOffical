@@ -1,0 +1,432 @@
+[gd_scene load_steps=23 format=3 uid="uid://dfbpxk20yl7yh"]
+
+[ext_resource type="Script" uid="uid://cxjarr41gq308" path="res://Scripts/number_of_players.gd" id="1_t54wt"]
+[ext_resource type="Texture2D" uid="uid://boegl0vs8p2v6" path="res://Assests/sprites/plx-1.png" id="2_5fbg3"]
+[ext_resource type="Texture2D" uid="uid://dgxao1ktkt2iw" path="res://Assests/sprites/plx-5.png" id="2_t54wt"]
+[ext_resource type="FontFile" uid="uid://dkksbtprri3ec" path="res://Assests/fonts/Jersey15-Regular.ttf" id="3_5lirh"]
+[ext_resource type="Texture2D" uid="uid://ohrn57osph64" path="res://Assests/fonts/image-removebg-preview (2).png" id="4_s0vsp"]
+[ext_resource type="Texture2D" uid="uid://cqcli3wr4pjau" path="res://Assests/Images/pixil-frame-0 (16).png" id="5_f2jft"]
+[ext_resource type="Texture2D" uid="uid://cna2qigcbekat" path="res://Assests/Images/pixil-frame-0 (9).png" id="5_s0vsp"]
+[ext_resource type="FontFile" uid="uid://ckq3gadchfsqs" path="res://Assests/fonts/PixelOperator8-Bold.ttf" id="6_5lirh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48xlc"]
+texture = ExtResource("2_5fbg3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5lirh"]
+texture = ExtResource("2_t54wt")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ehe0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
+bg_color = Color(0.824351, 0.824351, 0.824351, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+bg_color = Color(0.578618, 0.578618, 0.578618, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t54wt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5fbg3"]
+bg_color = Color(0, 0, 0, 0.360784)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.683077, 0.683077, 0.683077, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lirh"]
+bg_color = Color(0, 0, 0, 0.384314)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.341584, 0.341584, 0.341584, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0vsp"]
+bg_color = Color(0.0509804, 0.141176, 0.121569, 0.0235294)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.900707, 0.900704, 0.900704, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n45e2"]
+content_margin_top = 0.0
+texture = ExtResource("4_s0vsp")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2jft"]
+bg_color = Color(0, 0, 0, 0.482353)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_os88y"]
+bg_color = Color(0.312124, 0.550288, 0.499723, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.910571, 0.9415, 0.929495, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="Theme" id="Theme_f2jft"]
+default_font = ExtResource("3_5lirh")
+default_font_size = 35
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t54wt")
+
+[node name="GreenBG" type="Panel" parent="."]
+modulate = Color(0.712962, 0.712962, 0.712962, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_48xlc")
+
+[node name="TreeBG" type="Panel" parent="."]
+modulate = Color(0.712962, 0.712962, 0.712962, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5lirh")
+
+[node name="MainButtons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.332465
+anchor_top = 0.462963
+anchor_right = 0.667535
+anchor_bottom = 0.814815
+offset_top = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="2 Players" type="Button" parent="MainButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_5lirh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1ehe0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vrkn")
+text = "2 Players"
+
+[node name="3 Players" type="Button" parent="MainButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_5lirh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1ehe0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vrkn")
+text = "3 Players"
+
+[node name="4 Players" type="Button" parent="MainButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_5lirh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1ehe0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vrkn")
+text = "4 Players"
+
+[node name="GameSettings" type="Button" parent="."]
+layout_mode = 2
+offset_left = 294.0
+offset_top = 551.0
+offset_right = 858.0
+offset_bottom = 612.0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.682353, 0.682353, 0.682353, 1)
+theme_override_colors/font_color = Color(0.863239, 0.863239, 0.863239, 1)
+theme_override_colors/font_focus_color = Color(0.906493, 0.906493, 0.906493, 1)
+theme_override_colors/font_pressed_color = Color(0.278431, 0.278431, 0.278431, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_5lirh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t54wt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5fbg3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5lirh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s0vsp")
+text = "Game Settings"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 2
+offset_left = 37.0
+offset_top = 550.0
+offset_right = 104.0
+offset_bottom = 633.0
+scale = Vector2(1, 0.76)
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.682353, 0.682353, 0.682353, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.906493, 0.906493, 0.906493, 1)
+theme_override_colors/font_pressed_color = Color(0.278431, 0.278431, 0.278431, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 1
+theme_override_icons/icon = ExtResource("5_f2jft")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t54wt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5fbg3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5lirh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s0vsp")
+icon = ExtResource("5_s0vsp")
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="Title" type="Panel" parent="."]
+modulate = Color(0, 0.827936, 0, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -297.0
+offset_top = -16.0
+offset_right = 293.0
+offset_bottom = 249.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_n45e2")
+
+[node name="PlayerSelection" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -234.0
+offset_top = -89.0
+offset_right = 234.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.865377, 1, 0.865689, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 15
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_5lirh")
+theme_override_font_sizes/font_size = 28
+text = "Player Selection"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="DarkBG" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f2jft")
+
+[node name="Panel" type="Panel" parent="DarkBG"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -168.0
+offset_right = 290.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_os88y")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DarkBG/Panel"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 69.0
+offset_right = 188.0
+offset_bottom = 199.0
+
+[node name="Label" type="Label" parent="DarkBG/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5lirh")
+theme_override_font_sizes/font_size = 74
+text = "Buffs"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="DarkBG/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5lirh")
+theme_override_font_sizes/font_size = 74
+text = "Time"
+vertical_alignment = 1
+
+[node name="Close" type="Button" parent="DarkBG/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -130.0
+offset_top = -89.0
+offset_right = 130.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.682353, 0.682353, 0.682353, 1)
+theme_override_colors/font_color = Color(0.863239, 0.863239, 0.863239, 1)
+theme_override_colors/font_focus_color = Color(0.906493, 0.906493, 0.906493, 1)
+theme_override_colors/font_pressed_color = Color(0.366595, 0.366595, 0.366595, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_5lirh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t54wt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5fbg3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5lirh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s0vsp")
+text = "Close
+"
+
+[node name="SelectTime" type="SpinBox" parent="DarkBG/Panel"]
+layout_mode = 2
+offset_left = 250.0
+offset_top = 165.0
+offset_right = 364.0
+offset_bottom = 209.0
+scale = Vector2(1.20616, 1.11574)
+theme = SubResource("Theme_f2jft")
+min_value = 30.0
+max_value = 180.0
+step = 5.0
+value = 60.0
+alignment = 1
+
+[node name="BuffsChoice" type="CheckButton" parent="DarkBG/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.0
+offset_top = 76.0
+offset_right = -14.0
+offset_bottom = 100.0
+grow_horizontal = 2
+scale = Vector2(2.58538, 2.79222)
+
+[node name="OnOrOff" type="Label" parent="DarkBG/Panel"]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 76.0
+offset_right = 518.0
+offset_bottom = 116.0
+scale = Vector2(1.37655, 1.48932)
+theme_override_fonts/font = ExtResource("3_5lirh")
+theme_override_font_sizes/font_size = 35
+text = "OFF"
+vertical_alignment = 1
+uppercase = true
+
+[node name="SecondsLabel" type="Label" parent="DarkBG/Panel"]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 161.0
+offset_right = 519.0
+offset_bottom = 201.0
+scale = Vector2(1.37655, 1.48932)
+theme_override_fonts/font = ExtResource("3_5lirh")
+theme_override_font_sizes/font_size = 35
+text = "Sec"
+vertical_alignment = 1
+
+[node name="SettingsLabel" type="Label" parent="DarkBG"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_right = 224.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_5lirh")
+theme_override_font_sizes/font_size = 80
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[connection signal="pressed" from="MainButtons/2 Players" to="." method="_on_2_players_pressed"]
+[connection signal="pressed" from="MainButtons/3 Players" to="." method="_on_3_players_pressed"]
+[connection signal="pressed" from="MainButtons/4 Players" to="." method="_on_4_players_pressed"]
+[connection signal="pressed" from="GameSettings" to="." method="_on_game_settings_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="DarkBG/Panel/Close" to="." method="_on_close_pressed"]
+[connection signal="value_changed" from="DarkBG/Panel/SelectTime" to="." method="_on_select_time_value_changed"]
+[connection signal="toggled" from="DarkBG/Panel/BuffsChoice" to="." method="_on_buffs_choice_toggled"]

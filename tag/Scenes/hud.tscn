@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3o3kfurjc10r"]
+
+[ext_resource type="FontFile" uid="uid://wdd0q51gk36n" path="res://Assests/fonts/PixelOperator8.ttf" id="1_37p78"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Start Button" type="Button" parent="."]
+offset_right = 124.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 24
+text = "Start"
+
+[node name="Title" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 32
+text = "Tag 2.0"
